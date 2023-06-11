@@ -1,0 +1,16 @@
+1b. ping yahoo.com
+    ping yahoo.com -f -l 1500
+
+4a. sudo systemctl stop apache2
+    sudo systemctl start apache2
+    nmap ipaddress
+
+5b. cat <file.txt>
+    hashcat -m 0 hash.txt rockyou.txt
+    hashcat -m 0 --show hash.txt rockyou.txt
+
+6b. snow
+    snow -C -m "message" -p "password" <sourcefile> <destinationfile>
+    snow -C -p "password" <destinationfile> 
+
+8b. copy /b a.jpg+b.txt c.jpg

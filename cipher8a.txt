@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+#include<ctype.h>
+#include<string.h>
+int main(){
+	char plain[10],cipher[10];
+	int i,key;
+	printf("enter the plain text\n");
+	scanf("%s",plain);
+	printf("enter the key\n");
+	scanf("%d",&key);
+	printf("\n\n\t plain text:%s",plain);
+	printf("\n\n\t encryped text:");
+	for(i=0;i<strlen(plain);i++){
+		cipher[i]=plain[i]+key;
+		if((isupper(plain[i]))&&(cipher[i]>'Z')){
+			cipher[i]=cipher[i]-26;
+		}
+		if((islower(plain[i]))&&(cipher[i]>'z')){
+			cipher[i]=cipher[i]-26;
+		}
+		printf("%c",cipher[i]);
+	}
+	printf("\n\n\t decrypted message:");
+	for(i=0;i<strlen(plain);i++){
+		plain[i]=cipher[i]-key;
+		if((isupper(cipher[i]))&&(plain[i]<'A')){
+			plain[i]=plain[i]+26;
+		}
+		if((islower(cipher[i]))&&(plain[i]<'a')){
+			plain[i]=plain[i]+26;
+		}
+		printf("%c",plain[i]);
+	}
+	return 0;
+}
